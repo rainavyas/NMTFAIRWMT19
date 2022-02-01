@@ -18,6 +18,14 @@ if __name__ == "__main__":
     commandLineParser.add_argument('--num_beams', type=int, default=15, help="Specify number of decoding beams")
     args = commandLineParser.parse_args()
 
+    # Save the command run
+    text = ' '.join(sys.argv)+'\n'
+    if not os.path.isdir('CMDs'):
+        os.mkdir('CMDs')
+    with open('CMDs/predict.cmd', 'a') as f:
+        f.write(text)
+    print(text)
+
     # Load model
     mname = f'facebook/wmt19-{args.translation}'
     tokenizer = FSMTTokenizer.from_pretrained(mname)
