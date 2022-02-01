@@ -50,6 +50,7 @@ if __name__ == "__main__":
             use_cache = True,
             num_return_sequences = 1)
         prediction = tokenizer.decode(outputs.squeeze(), skip_special_tokens=True, clean_up_tokenization_spaces=True)
+        print(prediction)
         predictions.append(prediction)
     
     # Save to file
