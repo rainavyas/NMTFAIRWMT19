@@ -20,3 +20,11 @@ mkdir -p $DATA_DIR
 sacrebleu -t wmt19 -l $PAIR --echo src > $DATA_DIR/wmt19_$PAIR.source
 sacrebleu -t wmt19 -l $PAIR --echo ref > $DATA_DIR/wmt19_$PAIR.target
 ```
+
+Generate predictions:
+
+`python predict.py $PREDICTION_PATH.prediction $DATA_DIR/wmt19_$PAIR.source --translation $PAIR --num_beams 15` 
+
+Evaluate the predictions:
+
+`python evaluate.py $PREDICTION_PATH.prediction $DATA_DIR/wmt19_$PAIR.target`
