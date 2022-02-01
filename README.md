@@ -14,4 +14,8 @@ python3.6 or above
 
 Download the dataset using the CLI:
 
-`sacrebleu -t wmt19 -l en-de --echo src | head -n1`
+```console
+mkdir -p $DATA_DIR
+sacrebleu -t wmt19 -l $PAIR --echo src > $DATA_DIR/val.source
+sacrebleu -t wmt19 -l $PAIR --echo ref > $DATA_DIR/val.target
+```
