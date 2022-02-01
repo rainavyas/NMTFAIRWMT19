@@ -16,6 +16,6 @@ Download the dataset using the CLI:
 
 ```console
 mkdir -p $DATA_DIR
-sacrebleu -t wmt19 -l $PAIR --echo src > $DATA_DIR/val.source
-sacrebleu -t wmt19 -l $PAIR --echo ref > $DATA_DIR/val.target
+sacrebleu -t wmt19 -l $PAIR --echo src > $DATA_DIR/wmt19.source
+sacrebleu -t wmt19 -l $PAIR --echo ref > $DATA_DIR/wmt19.target
 ```
