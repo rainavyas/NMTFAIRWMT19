@@ -9,3 +9,9 @@ python3.6 or above
 
 ## Install with PyPI
 `pip install torch transformers sacrebleu`
+
+# Quick Start
+
+Download the dataset using the CLI:
+
+`sacrebleu -t wmt19 -l en-de --echo src | head -n1`
