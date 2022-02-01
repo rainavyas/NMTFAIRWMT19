@@ -38,7 +38,7 @@ if __name__ == "__main__":
     # Prediction
     predictions = []
     for i, source in enumerate(sentences):
-        print(f'Decoding {i/len(sentences)}')
+        print(f'Decoding {i}/{len(sentences)}')
         input_ids = tokenizer.encode(source, return_tensors="pt")
         outputs = model.generate(
             input_ids = input_ids,
