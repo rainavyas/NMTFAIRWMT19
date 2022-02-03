@@ -54,6 +54,6 @@ if __name__ == "__main__":
         predictions.append(prediction)
     
     # Save to file
-    predictions = predictions[0] + ['\n'+pred for pred in predictions[1:]]
+    predictions = [predictions[0]] + ['\n'+pred for pred in predictions[1:]]
     with open(args.OUT, 'w') as f:
         f.writelines(predictions)
