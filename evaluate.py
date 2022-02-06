@@ -37,15 +37,15 @@ if __name__ == "__main__":
 
     # BLEU score
     bleu = BLEU()
-    result =  bleu.corpus_score(predictions, targets)
+    result =  bleu.corpus_score(predictions, [targets])
     print(f'BLEU:\t{result}')
     
     # CHRF score
     chrf = CHRF()
-    result =  chrf.corpus_score(predictions, targets)
+    result =  chrf.corpus_score(predictions, [targets])
     print(f'CHRF:\t{result}')
 
     # TER score
     ter = TER()
-    result =  ter.corpus_score(predictions, targets)
+    result =  ter.corpus_score(predictions, [targets])
     print(f'TER:\t{result}')
